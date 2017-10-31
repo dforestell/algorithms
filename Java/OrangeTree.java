@@ -1,11 +1,11 @@
 class OrangeTree{
 	int age;
-	int height;
+	double height;
 	boolean oranges;
 
 	public OrangeTree() {
 		age = 0;
-		height = 0;
+		height = 0.0;
 		oranges = false;
 	}
 
@@ -14,7 +14,7 @@ class OrangeTree{
 		return age;
 	}
 
-	public int checkHeight(){
+	public double checkHeight(){
 		System.out.println("The tree is " + height + " feet tall.");
 		return height;
 	}
@@ -50,7 +50,24 @@ class OrangeTree{
 			System.out.println("This tree is still alive");
 			return false;
 		}
+	}
+
+	public void passGrowingSeason(){
+		age = age + 1;
+		if (isDead() == false){
+			if (height <= 22.5){
+				height = height + 2.5;
+			}
+			else if (height > 22.5 && height < 25.0 ){
+				height = 25.0;
+			}
+		}
+
+		if (isMature() == true && isDead() == false){
+			oranges = true;
+		}
 	}  
+
 	public static void main (String[] args){
 
 	}
