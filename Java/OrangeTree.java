@@ -28,7 +28,29 @@ class OrangeTree{
 			System.out.println("This tree does not have oranges");
 			return oranges;
 		}
-	} 
+	}
+
+	public boolean isMature(){
+		if (age >= 6){
+			System.out.println("This tree is mature");
+			return true;
+		}
+		else {
+			System.out.println("This tree is not yet mature");
+			return false;
+		}
+	}
+
+	public boolean isDead(){
+		if (age > 100){
+			System.out.println("This tree is dead");
+			return true;
+		}
+		else {
+			System.out.println("This tree is still alive");
+			return false;
+		}
+	}  
 	public static void main (String[] args){
 
 	}
