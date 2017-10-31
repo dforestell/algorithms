@@ -54,7 +54,7 @@ class OrangeTree{
 
 	public void passGrowingSeason(){
 		age = age + 1;
-		if (isDead() == false){
+		if (age < 100){
 			if (height <= 22.5){
 				height = height + 2.5;
 			}
@@ -63,12 +63,48 @@ class OrangeTree{
 			}
 		}
 
-		if (isMature() == true && isDead() == false){
+		if (age >= 6 && age < 100){
 			oranges = true;
+		}
+	}
+
+	public void harvest(){
+		if (oranges == true){
+			System.out.println("You successfully picked all the oranges");
+			oranges = false;
+		}
+		else {
+			System.out.println("There were no oranges to pick, sorry.");
 		}
 	}  
 
 	public static void main (String[] args){
-
+		OrangeTree firstTree = new OrangeTree();
+		firstTree.checkAge();
+		firstTree.checkHeight();
+		firstTree.passGrowingSeason();
+		firstTree.passGrowingSeason();
+		firstTree.passGrowingSeason();
+		firstTree.isMature();
+		firstTree.passGrowingSeason();
+		firstTree.hasOranges();
+		firstTree.passGrowingSeason();
+		firstTree.passGrowingSeason();
+		firstTree.passGrowingSeason();
+		firstTree.passGrowingSeason();
+		firstTree.passGrowingSeason();
+		firstTree.checkAge();
+		firstTree.checkHeight();
+		firstTree.hasOranges();
+		firstTree.harvest();
+		firstTree.hasOranges();
+		firstTree.isMature();
+		firstTree.passGrowingSeason();
+		firstTree.passGrowingSeason();
+		firstTree.passGrowingSeason();
+		firstTree.passGrowingSeason();
+		firstTree.passGrowingSeason();
+		firstTree.passGrowingSeason();
+		firstTree.checkHeight();
 	}
 }
